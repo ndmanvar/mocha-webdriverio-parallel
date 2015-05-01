@@ -27,13 +27,7 @@ describe("NFL", function () {
         });
 
         it("has the correct title", function (done) {
-            client
-                .url(url)
-                .getTitle(function (err, title) {
-                    expect(err).to.not.exist;
-                    expect(title).to.be.equal("NFL.com - Official Site of the National Football League");
-                })
-                .call(done);
+            client.call(done);
         });
         it("logs in the user", function (done) {
             client.call(done);
