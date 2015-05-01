@@ -1,0 +1,3 @@
+- { browserName: "chrome", version: "27", platform: "XP", tags: ["examples"], name: "This is an example test" }
+- { browserName: "firefox", version: "27", platform: "Windows 7" }
+- { browserName: "safari", version: "8", platform: "OS X 10.10" }
