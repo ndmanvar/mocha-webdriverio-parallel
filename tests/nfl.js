@@ -42,7 +42,23 @@ describe("NFL", function () {
                 .call(done);
         });
         it("logs in the user", function (done) {
-            client.call(done);
+            client
+                .url(url)
+                .waitForExist(".sign-in", 5000)
+                .click(".sign-in")
+                .element(".yui3-modal-login-iframe").then(function (res) {
+                    client.frame(res.value);
+                    client.setValue("#registration-username", process.env.USERNAME);
+                    client.setValue("#registration-password", process.env.PASSWORD);
+                    client.click(".submit .button-royal-blue");
+                    client.frame(null);
+                })
+                .pause(10000)
+                .getText(".user-profile-link", function (err, text) {
+                    expect(err).to.not.exist;
+                    expect(text).to.be.equal("alanmulhall73");
+                })
+                .call(done);
         });
     });
 });
