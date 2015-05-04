@@ -2,6 +2,8 @@
 
 Have node / npm installed.
 
+Have SAUCE_USERNAME and SAUCE_ACCESS_KEY in ENV variables.
+
 ## To run
 
 Once in root of directory (i.e. pwd is mocha-webdriverio-parallel)
