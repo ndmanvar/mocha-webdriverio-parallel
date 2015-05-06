@@ -1,8 +1,9 @@
 ## Pre-req
 
-Have node / npm installed.
-
-Have SAUCE_USERNAME and SAUCE_ACCESS_KEY in ENV variables.
+```
+	export SAUCE_USERNAME=your_username
+	export SAUCE_ACCESS_KEY=your_access_key
+```
 
 ## To run
 
